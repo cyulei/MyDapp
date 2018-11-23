@@ -2,7 +2,6 @@ pragma solidity ^0.4.24;
 
 contract SimpleStorage {
     
-  uint MAX_MESSAGE = 100;
   //留言结构体
   struct Message {
       string word;       //留言内容
@@ -19,7 +18,7 @@ contract SimpleStorage {
     string timestamp;    //帖子的unix时间戳
     uint id;             //帖子的ID
     mapping(uint => Message) words; //帖子的留言
-    uint wordsSize;
+    uint wordsSize;      //留言的数量
   }
 
   Post[] private posts;   //存储所有的帖子
