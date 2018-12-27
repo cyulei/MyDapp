@@ -8,6 +8,8 @@ import 'rsuite/dist/styles/rsuite.min.css';
 import "./App.css";
 import ListItem from './ListItem';
 
+//const contractAddress = "0x635141f7fcd80c47ce38644a7c3142a211d2a4ef" // 合约地址(私链以太坊测试)
+
 class App extends Component {
 		constructor(props) {
 			super(props);
@@ -18,7 +20,7 @@ class App extends Component {
 				activePage: 1,
 				list: [],
 				perpage:3,
-				pages:10,
+				pages:5,
 				showlist:[],
 				show: false,
 				title: null,
@@ -55,6 +57,11 @@ class App extends Component {
       // Get the contract instance.
       const Contract = truffleContract(SimpleStorageContract);
       Contract.setProvider(web3.currentProvider);
+			
+			// 以太坊测试环境
+			// const instance = await Contract.at(contractAddress);
+			
+			// 部署本地
       const instance = await Contract.deployed();
 
       // Set web3, accounts, and contract to the state, and then proceed with an
