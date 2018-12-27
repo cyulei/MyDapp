@@ -6,6 +6,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
+    "reactjs-pagination": "^0.0.8",
+    "rsuite": "^3.4.5",
     "truffle-contract": "^4.0.0-beta.1",
     "web3": "^1.0.0-beta.36"
   },

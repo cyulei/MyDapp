@@ -30,7 +30,7 @@ contract SimpleStorage {
       content: c,
       from: msg.sender,
       timestamp: time,
-      id: posts.length+1,
+      id: posts.length,
       wordsSize: 0
     }));
   }
@@ -46,7 +46,7 @@ contract SimpleStorage {
       return(0,"","",msg.sender,"");
     }else{
       Post storage result = posts[number];
-      return(posts.length,result.title,result.content,result.from,result.timestamp);
+      return(result.id,result.title,result.content,result.from,result.timestamp);
     }
   }
 
