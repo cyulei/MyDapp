@@ -1,8 +1,27 @@
 # Free Talk DApp
+[TOC]
+
 ## 简介
 这款DApp可以无论你是谁你都可以在上面进行发帖和留言，留下你珍贵的言论将伴随区块链永久记录在区块链上。留言的展示形式是弹幕形式，你可以看到大家的留言。
-想要了解更多请观看视频：[FreeTalkDappDemo][1]
 
+想要了解更多请观看项目演示视频：[FreeTalkDappDemo][1]
+
+## 项目结构
+```
+.
+├── client 前端
+├── contracts 智能合约文件
+│   ├── SimpleStorage.sol
+│   └── Migrations.sol
+├── migrations 部署用到的脚本
+│   ├── 1_initial_migration.js
+│   └── 2_deploy_contracts.js
+├── test 编写的测试
+│   └── simplestorage.js
+│   └── TestSimpleStorage.sol
+└── truffle.js
+
+```
 ## 开发环境与工具
 - Windows 10
 - Node.js v10.13.0
@@ -37,7 +56,9 @@
 - 最后访问localhost:3000可以看到完整界面
 > 这里需要配合Google浏览器的 `MetaMask` 插件，选择区块链测试环境是localhost:8545，在里面导入 `TestRPC` 给的默认账号进行交易
 
-【完整界面图】
+下面是运行后的完整界面图
+
+![完整界面图][2]
 
 ## 选题背景
 在国内有很多可以发表自己言论这类的应用，比如像微博，贴吧，甚至是微信公众号, qq空间等，在国外有 Twitter ,   Facebook 等只要是有涉及人类的社交，就可以提供留言以及发表自己想法功能。
@@ -59,28 +80,66 @@
 
 1.输入空白会有提示
 
+![测试为空][3]
+
 2.进行发帖，弹出交易
 
+![发帖][4]
+
 3.发帖成功
+
+![发帖][5]
 
 - 测试留言功能
 > 点击帖子旁边 `点击留言` 进行留言
 
 1.输入空白会有提示
 
+![Liuyan][6]
+
 2.进行留言
+
+![liuyan][7]
 
 3.留言成功
 
+![liuyan][8]
+
 - 测试分页功能
 
+1.三个帖子为1页
+
+![page1][9]
+
+2.正常分页
+
+![page2][10]
+
 - 测试弹幕功能
+1.弹幕会有不同颜色和速度
+
+![b1][11]
+
+2.每次刷新改变颜色和速度
+
+![b2][12]
 
 ## 项目参考
-- React 的 UI 组件库：[rsuitejs][2]
-- 一个简单的弹幕组件: [react-barrage][3]
+- React 的 UI 组件库：[rsuitejs][13]
+- 一个简单的弹幕组件: [react-barrage][14]
 
 
   [1]: https://www.bilibili.com/video/av39120015/
-  [2]: https://rsuitejs.com/
-  [3]: https://github.com/forthealllight/react-barrage
+  [2]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/full.png
+  [3]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/sendpost1.png
+  [4]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/sendpost2.png
+  [5]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/sendpost3.png
+  [6]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/sendmessage1.png
+  [7]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/sendmessage2.png
+  [8]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/sendmessage3.png
+  [9]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/page1.png
+  [10]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/page2.png
+  [11]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/b1.png
+  [12]: https://raw.githubusercontent.com/cyulei/MyDapp/master/photo/b2.png
+  [13]: https://rsuitejs.com/
+  [14]: https://github.com/forthealllight/react-barrage
